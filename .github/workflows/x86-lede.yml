@@ -8,7 +8,11 @@
 
 name: lean - x86
 
-on: 
+on:
+  push:
+    branches:
+      - master
+      
   #release:
     #types: [published]
 
