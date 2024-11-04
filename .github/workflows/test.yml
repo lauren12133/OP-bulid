@@ -35,7 +35,8 @@ jobs:
     - name: Free up disk space complete
       run: |
         mkdir -p openwrt/bin
-        
+        dd if=/dev/zero of=openwrt/bin/empty_file.bin bs=1M count=50
+        ls -l openwrt/bin  # 列出文件，确认生成是否成功
         
 
     - name : Upload artifact
