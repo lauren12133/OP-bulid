@@ -164,7 +164,7 @@ jobs:
       working-directory: ./openwrt
       run: |
         echo -e "$(nproc) thread build."
-        make kernel_compile -j$(nproc) V=s
+        make target/linux/compile -j$(nproc) V=s
 
     - name : Upload artifact
       uses: actions/upload-artifact@master
